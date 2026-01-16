@@ -37,3 +37,15 @@ Example crontab entry to send a motivational quote every Monday at 8:00 AM:<br>
 ```bash
 0 8 * * 1 /usr/bin/python3 /home/pi/motivational_mailer/main.py
 ```
+
+## Requirements
+- Python >= 3.6
+
+### Notes for older Raspberry Pi OS versions
+Raspberry Pi OS Stretch ships with Python 3.5.x.
+If you are running Python < 3.6, you must either:
+
+- upgrade your OS / Python version, or
+- adapt the code:
+  - replace f-strings with `str.format()`
+  - convert `pathlib.Path` objects to `str` when used with older libraries

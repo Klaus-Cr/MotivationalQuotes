@@ -34,8 +34,10 @@ class EMailClient():
             self.logger.write_log("Email was send successful")
 
         except SMTPException as error:
+            # HINT: f-strings require Python >= 3.6
             self.logger.write_log(f"SMTP error: {error}",self.logger.ERROR)
 
         except Exception as error:
+            # HINT: f-strings require Python >= 3.6
             self.logger.write_log(f"General error: {error}",self.logger.ERROR)
 

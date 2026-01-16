@@ -29,6 +29,7 @@ def main() -> None:
         exit(1)
     else:
         text = choice(data)
+        # HINT: f-strings require Python >= 3.6
         msg = f"{text["quote"]}\nAuthor: {text["author"]}"
 
     email_client = EMailClient(logger,SMTP_HOST,

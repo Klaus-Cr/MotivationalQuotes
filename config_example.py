@@ -14,6 +14,8 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent
 LOG_FILENAME = "example.log"
 QUOTE_FILENAME = "example.json"
+
+# Convert Path to str for compatibility with older Python / libraries
 LOGGING = BASE_DIR / LOG_FILENAME
 QUOTES  = BASE_DIR / QUOTE_FILENAME
 
